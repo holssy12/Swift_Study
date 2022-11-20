@@ -79,3 +79,4 @@ secondClassReference.property = 2
 // 첫 번째 클래스 인스턴스의 프로퍼티 값을 변경하게 된다.
 print("first class reference property : \(firstClassReference.property)")    // 2
 print("second class reference property : \(secondClassReference.property)")  // 2
+

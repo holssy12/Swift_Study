@@ -1,4 +1,4 @@
-// MARK: - 매개변수 기본값
+/* MARK: - 매개변수 기본값 */
 
 // 기본값을 갖는 매개변수는 뒤쪽에 위치하는 것이 좋다.
 func greeting(frined: String, me: String = "jhk") {

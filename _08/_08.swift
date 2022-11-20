@@ -1,4 +1,4 @@
-// MARK: - 조건문
+/* MARK: - 조건문 */
 
 let someInteger = 100
 
