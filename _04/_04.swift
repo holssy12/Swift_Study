@@ -24,6 +24,6 @@ var SomeAnyObject: AnyObject = SomeClass()
 // MARK: - nil
 //  == null. 아무 것도 없다는 의미.
 // someAny = nil        // Any타입이라도, nil을 할당할 수는 없다.
-// someAnyObject = nill // 불가능.
+// someAnyObject = nil // 불가능.
 
 
