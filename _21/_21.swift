@@ -53,6 +53,9 @@ class PersonC {
     var age: Int
     var nickName: String?
     
+    // convenience init은 init이 모든 프로퍼티를 전달받지 않았을 때 or 일부 프로퍼티만 있을 때의 상황을 대비하여
+    // 에러가 뜨지않게 미리 예약해놓는 느낌의 보조 이니셜라이저입니다.
+    
     init(name: String, age: Int, nickName: String) { // nickname을 넣어줘도, 안 넣어줘도 된다.
         self.name = name
         self.age = age
@@ -86,7 +89,7 @@ class Puppy {
 
 let happy: Puppy = Puppy(name: "happy")
 // 강아지는 주인없이 산책하면 안돼요!
-//happy.goOut() // 주인이 없는 상태라 오류 발생
+//happy.goOut() // 주인이 없는 상태라(nil) 오류 발생
 happy.owner = jenny
 happy.goOut()
 // happy가 주인 jenny와 산책을 합니다
@@ -136,6 +139,7 @@ class PersonE {
         self.child = child
     }
     
+    // 디이니셜라이저는 클래스에만 구현 가능.
     deinit {
         if let petName = pet?.name {
             print("\(name)가 \(child.name)에게 \(petName)를 인도합니다")
@@ -148,4 +152,3 @@ var donald: PersonE? = PersonE(name: "donald", child: jenny)
 donald?.pet = happy
 donald = nil // donald 인스턴스가 더이상 필요없으므로 메모리에서 해제됩니다
 // donald가 jenny에게 happy를 인도합니다
-
